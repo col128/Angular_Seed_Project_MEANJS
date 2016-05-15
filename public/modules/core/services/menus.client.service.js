@@ -163,5 +163,23 @@ angular.module('core').service('Menus', [
 
 		//Adding the topbar menu
 		this.addMenu('topbar');
+		this.addMenuItem('topbar',"电影管理","movie","item",'/movie',true,'*',0,'fa-diamond');
+		//this.addSubMenuItem('menuId',"rootMenuItemURL","menuItemTitle","menuItemURL",'/menuItemUIRoute',true,'*',0);
+		this.addSubMenuItem('topbar',"movie","电影列表","movie",'movie',true,'*',0);
+		this.addSubMenuItem('topbar',"movie","添加电影","movie",'movie',true,'*',0);
+		this.addSubMenuItem('topbar',"movie","删除电影","movie",'movie',true,'*',0);
+		this.addMenuItem('topbar',"评论管理","category","item",'/movie',true,'*',0,'fa-diamond');
+		this.addSubMenuItem('topbar',"category","添加评论","category/add",'category.add',true,'*',1);
+		this.addSubMenuItem('topbar',"category","评论列表","category/list",'category.list',true,'*',3);
+		this.addSubMenuItem('topbar',"category","删除评论","category/delete",'category.delete',true,'*',2);
+		this.addMenuItem('topbar',"用户管理");
+
+
+
+		this.addMenu('admin');
+		this.addMenu('person');
+		this.addMenu('expert');
+
+
 	}
 ]);
